@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi Niña Hermosa - Feliz Cumpleaños</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+
+<body>
+    <div class="background-overlay"></div>
+
+    <!-- Pantalla de Bienvenida -->
+    <div id="welcome-screen" class="screen active">
+        <div class="welcome-card glass">
+            <h1 class="dancing-script">¡Hola, mi amor!</h1>
+            <p>Hoy es un día especial porque es tu cumpleaños.</p>
+            <div class="gift-container" id="open-gift">
+                <div class="gift-box">
+                    <div class="gift-lid"></div>
+                    <div class="gift-body"></div>
+                </div>
+                <span>Haz clic para abrir tu regalo</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menú Principal -->
+    <div id="main-menu" class="screen">
+        <div class="menu-container">
+            <h2 class="dancing-script section-title">¿Qué quieres ver hoy?</h2>
+            <div class="menu-grid">
+                <button class="menu-item glass" onclick="showSection('phrases')">
+                    <span class="icon">💖</span>
+                    <span>Razones por las que te amo</span>
+                </button>
+                <button class="menu-item glass" onclick="showSection('wishes')">
+                    <span class="icon">🎂</span>
+                    <span>Mis deseos para ti</span>
+                </button>
+                <button class="menu-item glass" onclick="showSection('moments')">
+                    <span class="icon">📸</span>
+                    <span>Nuestros Momentos</span>
+                </button>
+                <button class="menu-item glass" onclick="showSection('music')">
+                    <span class="icon">🎵</span>
+                    <span>Nuestra Canción</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Frases -->
+    <div id="phrases-section" class="screen section-content">
+        <div class="glass-card">
+            <button class="back-btn" onclick="showMainMenu()">⬅ Regresar</button>
+            <h2 class="dancing-script">Razones por las que te amo</h2>
+            <div id="phrase-display" class="phrase-text">
+                Haz clic abajo para descubrir algo nuevo...
+            </div>
+            <button class="action-btn" id="new-phrase-btn">Descubrir otra razón ✨</button>
+        </div>
+    </div>
+
+    <!-- Sección de Deseos -->
+    <div id="wishes-section" class="screen section-content">
+        <div class="glass-card">
+            <button class="back-btn" onclick="showMainMenu()">⬅ Regresar</button>
+            <h2 class="dancing-script">Mis Deseos Sociales</h2>
+            <p>Que este año esté lleno de risas, de metas cumplidas y sobre todo, que sigamos construyendo este camino
+                juntos.</p>
+            <div class="wishes-grid">
+                <div class="wish-item">✨ Salud y Alegría</div>
+                <div class="wish-item">🌟 Sueños Cumplidos</div>
+                <div class="wish-item">❤ Amor Infinito</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Momentos -->
+    <div id="moments-section" class="screen section-content">
+        <div class="glass-card">
+            <button class="back-btn" onclick="showMainMenu()">⬅ Regresar</button>
+            <h2 class="dancing-script">Nuestros Momentos</h2>
+            <p>Un pequeño resumen de lo feliz que me haces ✨</p>
+            <div class="collage-container">
+                <div class="polaroid-item">
+                    <img src="WhatsApp Image 2026-03-18 at 9.38.53 AM.jpeg" alt="Momento 1">
+                </div>
+                <div class="polaroid-item">
+                    <img src="WhatsApp Image 2026-03-18 at 9.38.53 AM (1).jpeg" alt="Momento 2">
+                </div>
+                <div class="polaroid-item">
+                    <img src="WhatsApp Image 2026-03-18 at 9.38.53 AM (2).jpeg" alt="Momento 3">
+                </div>
+                <div class="polaroid-item">
+                    <img src="WhatsApp Image 2026-03-18 at 9.38.54 AM.jpeg" alt="Momento 4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Música -->
+    <div id="music-section" class="screen section-content">
+        <div class="glass-card">
+            <button class="back-btn" onclick="showMainMenu()">⬅ Regresar</button>
+            <h2 class="dancing-script">Nuestra Canción</h2>
+            <div class="music-player glass">
+                <p>Escuchando: <strong>Enchanted - Taylor Swift</strong> ✨</p>
+                <div class="note-animation">🎵 💖 ✨</div>
+                <div id="yt-player"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
